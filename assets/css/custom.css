@@ -1,3 +1,92 @@
 /*
     Custom Css
 */
+
+body {
+    /* color: #212529;
+    background-color: #fff; */
+}
+
+body, ul, li, p, a, label, input, div {
+    /* font-family: 'Roboto', sans-serif;
+    font-size: 18px !important;
+    font-weight: 300 !important; */
+}
+
+.h1 {
+    /* font-family: 'Roboto', sans-serif;
+    font-size: 48px !important;
+    font-weight: 200 !important; */
+}
+
+.h2 {
+    /* font-family: 'Roboto', sans-serif;
+    font-size: 30px !important;
+    font-weight: 300; */
+}
+
+.bg-dark {
+    /* background-color: #212934 !important; */
+}
+
+.bg-black {
+    /* background-color: #1d242d !important; */
+}
+
+.bg-light {
+    /* background-color: #e9eef5 !important; */
+}
+
+.form-control {
+    /* background-color: #fff; */
+}
+
+.form-control:focus {
+    /* color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); */
+}
+
+.card {
+    /* background-color: #fff; */
+}
+
+.page-link {
+    /* background-color: #fff; */
+}
+
+.page-link:focus {
+    /* background-color: #e9ecef; */
+}
+
+.pagination .page-link:hover, .pagination .page-link.active {
+    /* background-color: #69bb7e;
+    color: #fff; */
+}
+
+.text-light {
+    /* color: #cfd6e1 !important; */
+}
+
+.text-success {
+    /* color: #59ab6e !important; */
+}
+
+.btn-success {
+    /* background-color: #59ab6e !important;
+    border-color: #56ae6c !important; */
+}
+
+#templatemo_main_nav a {
+    /* color: #212934; */
+}
+
+.templatemo-accordion a {
+    /* color: #000; */
+}
+
+#template-mo-zay-hero-carousel {
+    /* background: #efefef !important; */
+}
