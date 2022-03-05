@@ -2,27 +2,49 @@
     Custom Css
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap');
+
+:root {
+    --pinkish-color: #f0644f;
+    --white-color: #fff;
+    --black-color: #252525 ;
+    --yellow-color: #f0c179;
+    --gray-color: #cfd6e1;
+}
+
 body {
     /* color: #212529;
     background-color: #fff; */
+    color: var(--black-color);
+    background-color: var(--white-color)
 }
 
 body, ul, li, p, a, label, input, div {
     /* font-family: 'Roboto', sans-serif;
     font-size: 18px !important;
     font-weight: 300 !important; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .h1 {
     /* font-family: 'Roboto', sans-serif;
     font-size: 48px !important;
     font-weight: 200 !important; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .h2 {
     /* font-family: 'Roboto', sans-serif;
     font-size: 30px !important;
     font-weight: 300; */
+    font-family: 'Oswald', sans-serif;
+}
+
+.h3 {
+    /* font-family: 'Roboto', sans-serif;
+    font-size: 22px !important; */
+    font-family: 'Oswald', sans-serif;
 }
 
 .bg-dark {
@@ -31,14 +53,17 @@ body, ul, li, p, a, label, input, div {
 
 .bg-black {
     /* background-color: #1d242d !important; */
+    background-color: var(--black-color)!important;
 }
 
 .bg-light {
     /* background-color: #e9eef5 !important; */
+    background-color: var(--yellow-color)!important;
 }
 
 .form-control {
     /* background-color: #fff; */
+    background-color: var(--white-color)!important;
 }
 
 .form-control:focus {
@@ -51,10 +76,12 @@ body, ul, li, p, a, label, input, div {
 
 .card {
     /* background-color: #fff; */
+    background-color: var(--white-color)!important;
 }
 
 .page-link {
     /* background-color: #fff; */
+    background-color: var(--white-color)!important;
 }
 
 .page-link:focus {
@@ -74,11 +101,6 @@ body, ul, li, p, a, label, input, div {
     /* color: #59ab6e !important; */
 }
 
-.btn-success {
-    /* background-color: #59ab6e !important;
-    border-color: #56ae6c !important; */
-}
-
 #templatemo_main_nav a {
     /* color: #212934; */
 }
@@ -89,4 +111,26 @@ body, ul, li, p, a, label, input, div {
 
 #template-mo-zay-hero-carousel {
     /* background: #efefef !important; */
+    background-color: var(--yellow-color)!important;
 }
+
+/* Buttons */
+
+.btn-success {
+    /* background-color: #59ab6e !important;
+    border-color: #56ae6c !important; */
+    background-color: var(--gray-color)!important;
+    border-color: var(--white-color)!important;
+    
+}
+
+.btn-success:hover {
+    transform: translate3d(0, -15%, 0) scale3d(1.2, 1, 1);
+    transition: all .5s;
+}
+
+.btn-success.text-light, .btn-success.btn {
+    color: var(--black-color)!important;
+}
+
+/* End Buttons */
