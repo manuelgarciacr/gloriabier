@@ -1,5 +1,4 @@
 /* Això es del nav */
-
 .nav-ul {
     max-width: initial;
     justify-content: space-evenly !important;
@@ -21,6 +20,10 @@
 
 .max-width-container{
     max-width: initial;
+}
+
+a.nav-link:hover {
+    color: #f0c179!important;
 }
 
 /* Fin del nav */
