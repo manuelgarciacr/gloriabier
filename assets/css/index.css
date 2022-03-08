@@ -1,0 +1,25 @@
+
+/* Footer */
+
+footer img.logo {
+    width: 100px;
+}
+
+.row.links {
+    justify-content: space-evenly;
+}
+
+.row.links > div {
+    width: fit-content;
+}
+
+.row.links > div:nth-child(2) a:hover,
+.row.links > div:nth-child(3) a:hover {
+    color: var(--white-color)!important;
+    text-shadow: 0px 0px 20px ;
+    display: block;
+    transform: translate3d(0, -15%, 0) scale3d(1.2, 1, 1);
+    transition: all .5s;
+}
+
+/* End Footer */
