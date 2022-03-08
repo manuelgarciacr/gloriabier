@@ -1,0 +1,16 @@
+/*Colors botons secció Ignasi del Homepage*/
+a.btn.btn-success{
+    background-color: #292929 !important;
+    border-color: #292929 !important; 
+}
+
+a.btn.btn-success:hover {
+    transition: all 0.5s;
+    color: #f0c179;
+}
+
+/*Background secció Ignasi Homepage*/
+
+section.container.py-5 {
+    background-image: url("../img/spray.jpg");
+}
