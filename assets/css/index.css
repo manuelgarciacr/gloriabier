@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /* Footer */
 
 footer img.logo {
@@ -24,7 +22,7 @@ footer img.logo {
 }
 
 /* End Footer */
-=======
+
 /* Això es del nav */
 .nav-ul {
     max-width: initial;
@@ -71,5 +69,3 @@ a.btn.btn-success:hover {
 section.container.py-5 {
     background-image: url("../img/spray.jpg");
 }
-
->>>>>>> f08c4843d6fb33277f3b5f20bdb5cf1e179fffb1
