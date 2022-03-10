@@ -117,11 +117,11 @@ body, ul, li, p, a, label, input, div {
 /* Carousel Hero */
 #template-mo-zay-hero-carousel .carousel-indicators li {
   margin-top: -50px;
-  background-color: #59ab6e;
+  background-color: #ffffff;
 }
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
-  color: #59ab6e !important;
+  color: #ffffff !important;
   font-size: 2.8em !important;
 }
 /* Carousel Brand */
