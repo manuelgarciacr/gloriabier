@@ -43,6 +43,10 @@ footer img.logo {
     flex-wrap: nowrap;
 }
 
+a.navbar-brand{
+    margin-right: 0;
+}
+
 .max-width-container{
     max-width: initial;
 }
