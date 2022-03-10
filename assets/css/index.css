@@ -39,6 +39,10 @@ footer img.logo {
     z-index: 10;
 }
 
+nav.navbar{
+    background-color: white;
+}
+
 .navbar-nowrap{
     flex-wrap: nowrap;
 }
@@ -53,6 +57,7 @@ a.navbar-brand{
 
 a.nav-link:hover {
     color: #f0c179!important;
+    transition: all 0.5s;
 }
 
 /* Fin del nav */
