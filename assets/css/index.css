@@ -39,8 +39,16 @@ footer img.logo {
     z-index: 10;
 }
 
+nav.navbar{
+    background-color: white;
+}
+
 .navbar-nowrap{
     flex-wrap: nowrap;
+}
+
+a.navbar-brand{
+    margin-right: 0;
 }
 
 .max-width-container{
@@ -49,6 +57,7 @@ footer img.logo {
 
 a.nav-link:hover {
     color: #f0c179!important;
+    transition: all 0.5s;
 }
 
 /* Fin del nav */
