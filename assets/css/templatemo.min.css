@@ -72,7 +72,7 @@ ul {
 
 .bg-success,
 .btn-success {
-    background-color: #59ab6e !important
+    background-color: var(--yellow-color) !important
 }
 
 .btn-success {
