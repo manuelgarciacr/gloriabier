@@ -12,12 +12,11 @@ footer img.logo {
     width: fit-content;
 }
 
-.row.links > div:nth-child(2) a:hover,
-.row.links > div:nth-child(3) a:hover {
-    color: var(--white-color)!important;
-    text-shadow: 0px 0px 20px ;
-    display: block;
-    transform: translate3d(0, -15%, 0) scale3d(1.2, 1, 1);
+.row.links a:hover {
+    color: var(--yellow-color)!important;
+    text-shadow: 0px 0px 20px;
+    display: inline-block;
+    transform: translate3d(10%, 0, 0) scale3d(1.2, 1.2, 1);
     transition: all .5s;
 }
 
@@ -65,12 +64,13 @@ a.nav-link:hover {
 /*Colors botons secció Ignasi del Homepage*/
 a.btn.btn-success{
     background-color: #292929 !important;
-    border-color: #292929 !important; 
+    border-color: #292929 !important;
+    color: var(--gray-color)!important; 
 }
 
 a.btn.btn-success:hover {
     transition: all 0.5s;
-    color: #f0c179;
+    color: #f0c179!important;
 }
 
 /*Background secció Ignasi Homepage*/
@@ -78,3 +78,29 @@ a.btn.btn-success:hover {
 section.container.py-5 {
     background-image: url("../img/spray.jpg");
 }
+
+/* Carousel */
+
+#template-mo-zay-hero-carousel {
+    margin-top: 3rem;
+}
+
+.carousel-item {
+    background-repeat: no-repeat;
+    height: calc(100vh - 3rem);
+}
+
+.carousel-item h1 {
+    font-size: 60px;
+}
+
+@media (min-width: 992px) {
+    #template-mo-zay-hero-carousel {
+        margin-top: 6rem;
+    }
+    .carousel-item {
+        height: calc(100vh - 6rem);
+    }
+} 
+
+/* Fin Carousel */

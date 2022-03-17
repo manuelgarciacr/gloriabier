@@ -13,6 +13,13 @@
     --gray-color: #cfd6e1;
 }
 
+* {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+         user-select: none; /* Non-prefixed version */
+}
+
 body {
     /* color: #212529;
     background-color: #fff; */
@@ -28,8 +35,9 @@ body, ul, li, p, a, label, input, div {
 }
 
 nav a {
-    font-weight: medium;
     font-family: 'Oswald', sans-serif;
+    font-weight: 500!important; /* Medium */
+    font-size: 21px!important;
 }
 
 .h1 {
@@ -54,6 +62,7 @@ nav a {
 
 .bg-dark {
     /* background-color: #212934 !important; */
+    background-color: var(--black-color)!important;
 }
 
 .bg-black {
