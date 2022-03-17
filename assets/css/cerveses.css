@@ -1,0 +1,16 @@
+.background-image {
+    position: relative;
+}
+
+h1  {
+    position: relative;
+    margin-top: 110px;
+    font-size: 50px;
+    top: 0;
+    bottom: 0;
+}
+
+#bloc1 {
+    margin-top: 40px;
+}
+
