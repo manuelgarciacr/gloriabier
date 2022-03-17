@@ -1,0 +1,17 @@
+section {
+    height: calc(100vh - 3rem);
+}
+   
+section:first-of-type {
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    section {
+        height: calc(100vh - 6rem);
+    }
+
+    section:first-of-type {
+        margin-top: 6rem;
+    }    
+} 
