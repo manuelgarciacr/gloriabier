@@ -1,0 +1,16 @@
+section.banner{
+    background-image: url(../img/banner-merchan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 3rem);
+    position: relative;
+}
+
+.container-banner{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0 !important;
+}
+
