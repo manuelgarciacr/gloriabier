@@ -30,12 +30,8 @@ https://templatemo.com/tm-559-zay-shop
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
-
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                Zay
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
+        <div class="container d-flex justify-content-between align-items-center max-width-container">
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -43,48 +39,67 @@ https://templatemo.com/tm-559-zay-shop
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
-                id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill d-flex justify-content-center">
+                    <ul class="nav navbar-nav d-flex mx-lg-auto nav-ul">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Inici</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.html">La Glòria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="cerveses.html">Cerveses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="shop.html">Promocions</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand text-success align-self-center d-flex justify-content-center a-nav"
+                        href="index.html">
+                        <img src="assets/img/gloriaBier.png" alt="gloriaBier" width="120px">
+                    </a>
+                    <ul class="nav navbar-nav d-flex mx-lg-auto nav-ul">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Botiga</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Merchandising</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacte</a>
+                        </li>
+                        <li>
+                            <div class="navbar align-self-center d-flex navbar-nowrap">
+                                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="inputMobileSearch"
+                                            placeholder="Search ...">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-fw fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#templatemo_search">
+                                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                                </a>
+                                <a class="nav-icon position-relative text-decoration-none" href="#">
+                                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                                    <span
+                                        class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                                </a>
+                                <a class="nav-icon position-relative text-decoration-none" href="#">
+                                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                                    <span
+                                        class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal"
-                        data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span
-                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
-                </div>
+
             </div>
 
         </div>
@@ -109,8 +124,6 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </div>
 
-
-
     <section class="background-image py-5" style="
     background-image: url('assets/img/banner\ ignasi.jpg');
     height: 50vh; background-size: cover">
@@ -128,7 +141,21 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!-- Close Banner -->
 
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Assaboreix la Glòria</h1>
+                <p>
+                    Totes les nostres cerveses han estat elaborades amb ingredients de primera qualitat. Tasta la Glòria i gaudeix de l'autèntic sabor de la cervesa tradicional.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
 
+
+<!--Cerveses-->
     <div class="row justify-content-around" id="bloc1">
         <div class="col-12 col-md-4 mb-4">
             <div class="card h-100">
@@ -158,7 +185,7 @@ https://templatemo.com/tm-559-zay-shop
                     <ul class="list-unstyled d-flex justify-content-between">
                         <li class="text-muted text-right"></li>
                     </ul>
-                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Eco</a>
                     <p class="card-text">
                         Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo
                         ullamcorper.
@@ -178,7 +205,7 @@ https://templatemo.com/tm-559-zay-shop
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li class="text-muted text-right"></li>
                         </ul>
-                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Doble Malta</a>
                         <p class="card-text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia
                             deserunt.
@@ -197,7 +224,7 @@ https://templatemo.com/tm-559-zay-shop
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li class="text-muted text-right"></li>
                         </ul>
-                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Toasted</a>
                         <p class="card-text">
                             Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo
                             ullamcorper.
@@ -217,7 +244,7 @@ https://templatemo.com/tm-559-zay-shop
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Morena</a>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia
                                 deserunt.
@@ -236,7 +263,7 @@ https://templatemo.com/tm-559-zay-shop
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Rubia</a>
                             <p class="card-text">
                                 Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo
                                 ullamcorper.
@@ -256,7 +283,7 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="list-unstyled d-flex justify-content-between">
                                     <li class="text-muted text-right"></li>
                                 </ul>
-                                <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
+                                <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Black</a>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia
                                     deserunt.
@@ -275,7 +302,7 @@ https://templatemo.com/tm-559-zay-shop
                                 <ul class="list-unstyled d-flex justify-content-between">
                                     <li class="text-muted text-right"></li>
                                 </ul>
-                                <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                                <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Fruit</a>
                                 <p class="card-text">
                                     Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed,
                                     commodo
@@ -295,8 +322,8 @@ https://templatemo.com/tm-559-zay-shop
                                     <ul class="list-unstyled d-flex justify-content-between">
                                         <li class="text-muted text-right"></li>
                                     </ul>
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria
-                                        Lager</a>
+                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Urbana
+                                        </a>
                                     <p class="card-text">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui
                                         officia
@@ -316,8 +343,8 @@ https://templatemo.com/tm-559-zay-shop
                                     <ul class="list-unstyled d-flex justify-content-between">
                                         <li class="text-muted text-right"></li>
                                     </ul>
-                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs
-                                        exclusius</a>
+                                    <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Franciscana
+                                        </a>
                                     <p class="card-text">
                                         Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed,
                                         commodo
@@ -338,8 +365,8 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled d-flex justify-content-between">
                                             <li class="text-muted text-right"></li>
                                         </ul>
-                                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria
-                                            Lager</a>
+                                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Delirium
+                                            </a>
                                         <p class="card-text">
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui
                                             officia
@@ -359,8 +386,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled d-flex justify-content-between">
                                             <li class="text-muted text-right"></li>
                                         </ul>
-                                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs
-                                            exclusius</a>
+                                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Negra Deluxe</a>
                                         <p class="card-text">
                                             Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra
                                             sed, commodo
@@ -371,121 +397,6 @@ https://templatemo.com/tm-559-zay-shop
                                 </div>
                             </div>
 
-
-
-                            <!-- Start Footer -->
-                            <footer class="bg-dark" id="tempaltemo_footer">
-                                <div class="container">
-                                    <div class="row">
-
-                                        <div class="col-md-4 pt-5">
-                                            <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop
-                                            </h2>
-                                            <ul class="list-unstyled text-light footer-link-list">
-                                                <li>
-                                                    <i class="fas fa-map-marker-alt fa-fw"></i>
-                                                    123 Consectetur at ligula 10660
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-phone fa-fw"></i>
-                                                    <a class="text-decoration-none"
-                                                        href="tel:010-020-0340">010-020-0340</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-envelope fa-fw"></i>
-                                                    <a class="text-decoration-none"
-                                                        href="mailto:info@company.com">info@company.com</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-4 pt-5">
-                                            <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
-                                            <ul class="list-unstyled text-light footer-link-list">
-                                                <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                                                <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                                                <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                                                <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                                                <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                                                <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                                                <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-4 pt-5">
-                                            <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
-                                            <ul class="list-unstyled text-light footer-link-list">
-                                                <li><a class="text-decoration-none" href="#">Home</a></li>
-                                                <li><a class="text-decoration-none" href="#">About Us</a></li>
-                                                <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                                                <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                                                <li><a class="text-decoration-none" href="#">Contact</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="row text-light mb-4">
-                                        <div class="col-12 mb-3">
-                                            <div class="w-100 my-3 border-top border-light"></div>
-                                        </div>
-                                        <div class="col-auto me-auto">
-                                            <ul class="list-inline text-left footer-icons">
-                                                <li
-                                                    class="list-inline-item border border-light rounded-circle text-center">
-                                                    <a rel="nofollow" class="text-light text-decoration-none"
-                                                        target="_blank" href="http://fb.com/templatemo"><i
-                                                            class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                                                </li>
-                                                <li
-                                                    class="list-inline-item border border-light rounded-circle text-center">
-                                                    <a class="text-light text-decoration-none" target="_blank"
-                                                        href="https://www.instagram.com/"><i
-                                                            class="fab fa-instagram fa-lg fa-fw"></i></a>
-                                                </li>
-                                                <li
-                                                    class="list-inline-item border border-light rounded-circle text-center">
-                                                    <a class="text-light text-decoration-none" target="_blank"
-                                                        href="https://twitter.com/"><i
-                                                            class="fab fa-twitter fa-lg fa-fw"></i></a>
-                                                </li>
-                                                <li
-                                                    class="list-inline-item border border-light rounded-circle text-center">
-                                                    <a class="text-light text-decoration-none" target="_blank"
-                                                        href="https://www.linkedin.com/"><i
-                                                            class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-auto">
-                                            <label class="sr-only" for="subscribeEmail">Email address</label>
-                                            <div class="input-group mb-2">
-                                                <input type="text" class="form-control bg-dark border-light"
-                                                    id="subscribeEmail" placeholder="Email address">
-                                                <div class="input-group-text btn-success text-light">Subscribe</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="w-100 bg-black py-3">
-                                    <div class="container">
-                                        <div class="row pt-2">
-                                            <div class="col-12">
-                                                <p class="text-left text-light">
-                                                    Copyright &copy; 2021 Company Name
-                                                    | Designed by <a rel="sponsored"
-                                                        href="https://templatemo.com/page/1"
-                                                        target="_blank">TemplateMo</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </footer>
-                            <!-- End Footer -->
-
                             <!-- Start Script -->
                             <script src="assets/js/jquery-1.11.0.min.js"></script>
                             <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -494,5 +405,107 @@ https://templatemo.com/tm-559-zay-shop
                             <script src="assets/js/custom.js"></script>
                             <!-- End Script -->
 </body>
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="container">
+        <div class="row links">
+            <div class="col-md-4 pt-5">
+                <img class="logo mb-4" src="assets/img/gloriabierlight.png" alt="Logo Gloria Bier">
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        Rambla del Poblenou, 156
+                    </li>
+                    <li class="ms-4">
+                        08018 Barcelona
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:info@company.com">info@gloriabier.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Productes</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Rosses</a></li>
+                    <li><a class="text-decoration-none" href="#">Negres</a></li>
+                    <li><a class="text-decoration-none" href="#">Sense</a></li>
+                    <li><a class="text-decoration-none" href="#">Llaunes</a></li>
+                    <li><a class="text-decoration-none" href="#">Barrils</a></li>
+                    <li><a class="text-decoration-none" href="#">Packs</a></li>
+                    <li><a class="text-decoration-none" href="#">Promocions</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">La Web</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Inici</a></li>
+                    <li><a class="text-decoration-none" href="#">La Glòria</a></li>
+                    <li><a class="text-decoration-none" href="#">Cerveses</a></li>
+                    <li><a class="text-decoration-none" href="#">Promocions</a></li>
+                    <li><a class="text-decoration-none" href="#">Botiga</a></li>
+                    <li><a class="text-decoration-none" href="#">Merchandising</a></li>
+                    <li><a class="text-decoration-none" href="#">Contacte</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row text-light">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto m-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank"
+                            href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+                                class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank"
+                            href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto m-auto">
+                <label class="sr-only" for="subscribeEmail">Correu electrònic</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+                        placeholder="Correu electrònic">
+                    <div class="input-group-text btn-success text-light">Subscriu-te</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <p class=" m-0 text-left text-light">
+                    Copyright &copy; 2022 Gloria Bier. v1.0.0
+                </p>
+                <p class="text-left text-light">
+                    Dissenyat per <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer -->
 
 </html>
