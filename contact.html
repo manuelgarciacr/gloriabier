@@ -52,7 +52,7 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="about.html">La Glòria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Cerveses</a>
+                            <a class="nav-link" href="cerveses.html">Cerveses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="shop.html">Promocions</a>
@@ -128,202 +128,153 @@ https://templatemo.com/tm-559-zay-shop
     </div>
     <!-- End Modal -->
 
+    <!-- Banner -->
+    <section class="container bg-light p-5">
+        <div class="row align-items-center">
+            <div class="col-md-8 mb-7">
+                <h1>Contacte</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <!-- Start Map -->
+                <div id='map' style='height: 300px;'></div>
+                <script>
+                    mapboxgl.accessToken =
+                        'pk.eyJ1IjoibWFudWVsZ2FyY2lhY3IiLCJhIjoiY2wwdWV3NHFvMDRtNzNjbnRyMTZ6dzdyayJ9.IWeSYpyejC6kY9H0zgRyZQ';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/manuelgarciacr/cl0ufg0ox000515mk27m5a7ox',
+                        center: [2.1945, 41.4065], // starting position
+                        zoom: 15 // starting zoo                 
+                    });
+                    
+                    // Create a custom Marker and add it to the map.
+                    const el = document.createElement('div');
+                    el.className = 'marker';
+                    el.style.backgroundImage = `url(assets/img/logo.png)`;
+                    el.style.width = `2rem`;
+                    el.style.height = `3rem`;
+                    el.style.backgroundSize = '100%';
+                    el.style.cursor = 'pointer';
 
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="row align-items-center py-5">
-                <div class="col-md-8">
-                    <h1>Contacte</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <!-- Start Map -->
-                    <div id='map' style='height: 300px;'></div>
-                    <script>
-                        mapboxgl.accessToken = 'pk.eyJ1IjoibWFudWVsZ2FyY2lhY3IiLCJhIjoiY2wwdWV3NHFvMDRtNzNjbnRyMTZ6dzdyayJ9.IWeSYpyejC6kY9H0zgRyZQ';
-                        var map = new mapboxgl.Map({
-                            container: 'map',
-                            style: 'mapbox://styles/manuelgarciacr/cl0ufg0ox000515mk27m5a7ox',
-                            center: [2.1945, 41.4065], // starting position
-                            zoom: 15 // starting zoo                 
-                        });
-                        // Create a default Marker and add it to the map.
-                        const marker1 = new mapboxgl.Marker({ color: 'red'})
-                            .setLngLat([2.194573121686624, 41.40668204615983])
-                            .addTo(map);
-                    </script>
-                    <!-- Ena Map -->
-                </div>
+                    // create the popup
+                    const popup = new mapboxgl.Popup({
+                        closeOnClick: false,
+                        offset: 25
+                    }).setHTML(
+                        '<a aria-label="Obteniu indicacions a Google Maps per arribar-hi." target="_blank" jstcache="38" href="https://maps.google.com/maps/dir//Rambla+del+Poblenou,+156+08018+Barcelona/@41.4065936,2.1944287,18z/data=!4m5!4m4!1m0!1m2!1m1!1s0x12a4a33b49e9c429:0xd39ba4174b0cc71a" class="navigate-link">Gloria Bier&nbsp;<img src="//maps.gstatic.com/consumer/images/icons/1x/ic_directions_filled_blue900_24px.png"></a>'
+                    );
+                    const marker1 = new mapboxgl.Marker(el)
+                        .setLngLat([2.194573121686624, 41.40668204615983])
+                        .setPopup(popup)
+                        .addTo(map)
+                        .togglePopup();
+                </script>
+                <!-- End Map -->
             </div>
         </div>
+        <a href="https://www.freepik.com/photos/cold-beer">master1305 - www.freepik.com</a>
     </section>
     <!-- Close Banner -->
 
-    <!-- Start Section -->
-    <section class="container py-5">
-        <div class="row text-center pt-5 pb-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">Our Services</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-        </div>
+    <!-- Start Contact -->
+    <section class="container d-flex flex-column justify-content-center">
         <div class="row">
-
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                    <h2 class="h5 mt-4 text-center">Delivery Services</h2>
+            <h2 class="text-uppercase text-center mb-5">Contacte</h2>
+            <form class="col-md-9 m-auto" method="post" role="form">
+                <div class="row">
+                    <div class="form-floating col-md-6 mb-2">
+                        <input type="text" class="form-control" id="inputname" name="name" placeholder="Nom">
+                        <label for="inputname">Nom</label>
+                    </div>
+                    <div class="form-floating col-md-6 mb-2">
+                        <input type="email" class="form-control" id="inputemail" name="email" placeholder="Email">
+                        <label for="inputemail">Email</label>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                    <h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+                <div class="row mb-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="inputsubject" name="subject" placeholder="Assumpte">
+                        <label for="inputsubject">Assumpte</label>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
-                    <h2 class="h5 mt-4 text-center">Promotion</h2>
+                <div class="row mb-2">
+                    <div class="form-floating">
+                        <textarea class="form-control" id="inputmessage" name="message" placeholder="Missatge"
+                            rows="4"></textarea>
+                        <label for="inputmessage">Missatge</label>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                    <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+                <div class="row mb-5">
+                    <div class="col text-end">
+                        <button type="submit" class="btn btn-success btn-lg px-3">Let's Talk</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
-    <!-- End Section -->
+    <!-- End Contact -->
 
-    <!-- Start Brands -->
-    <section class="bg-light py-5">
-        <div class="container my-4">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                </div>
-                <div class="col-lg-9 m-auto tempaltemo-carousel">
-                    <div class="row d-flex flex-row">
-                        <!--Controls-->
-                        <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
-                                <i class="text-light fas fa-chevron-left"></i>
-                            </a>
-                        </div>
-                        <!--End Controls-->
+    <!-- Start Signup -->
+    <section class="container h-100 bg-light py-5 d-flex flex-column justify-content-center">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-uppercase text-center mb-5">Registre</h2>
 
-                        <!--Carousel Wrapper-->
-                        <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand"
-                                data-bs-ride="carousel">
-                                <!--Slides-->
-                                <div class="carousel-inner product-links-wap" role="listbox">
-
-                                    <!--First slide-->
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End First slide-->
-
-                                    <!--Second slide-->
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End Second slide-->
-
-                                    <!--Third slide-->
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End Third slide-->
-
-                                </div>
-                                <!--End Slides-->
+                        <form>
+                            <div class="form-floating mb-2">
+                                <input type="text" id="reg-name" class="form-control form-control-lg"
+                                    placeholder="Nom" />
+                                <label for="reg-name">Nom</label>
                             </div>
-                        </div>
-                        <!--End Carousel Wrapper-->
 
-                        <!--Controls-->
-                        <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
-                                <i class="text-light fas fa-chevron-right"></i>
-                            </a>
-                        </div>
-                        <!--End Controls-->
+                            <div class="form-floating mb-2">
+                                <input type="email" id="reg-email" class="form-control form-control-lg"
+                                    placeholder="Email" />
+                                <label for="reg-email">Email</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="password" id="reg-password" class="form-control form-control-lg"
+                                    placeholder="Contrasenya" />
+                                <label for="reg-password">Contrasenya</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="password" id="reg-repeat-password" class="form-control form-control-lg"
+                                    placeholder="Repetiu la contrasenya" />
+                                <label for="reg-repeat-password">Repetiu la contrasenya</label>
+                            </div>
+
+                            <div class="form-check d-flex justify-content-center mb-2">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                                <label class="form-check-label" for="form2Example3g">
+                                    Accepto els <a href="#!" class="text-body"><u>Termes del servei</u></a>
+                                </label>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button"
+                                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                            </div>
+
+                            <p class="text-center text-muted mt-2 mb-0">¿Ja teniu un compte? <a href="#!"
+                                    class="fw-bold text-body"><u>Entreu aquí</u></a></p>
+
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--End Brands-->
-
+    <!--End Signup-->
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
@@ -368,7 +319,7 @@ https://templatemo.com/tm-559-zay-shop
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="index.html">Inici</a></li>
                         <li><a class="text-decoration-none" href="about.html">La Glòria</a></li>
-                        <li><a class="text-decoration-none" href="shop.html">Cerveses</a></li>
+                        <li><a class="text-decoration-none" href="cerveses.html">Cerveses</a></li>
                         <li><a class="text-decoration-none" href="shop.html">Promocions</a></li>
                         <li><a class="text-decoration-none" href="shop.html">Botiga</a></li>
                         <li><a class="text-decoration-none" href="merchandising.html">Merchandising</a></li>
@@ -434,6 +385,7 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/contact.js"></script>
     <!-- End Script -->
 </body>
 
