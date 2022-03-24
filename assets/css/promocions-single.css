@@ -1,0 +1,13 @@
+/* Carousel */
+
+section.content {
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    section.content {
+        margin-top: 6rem;
+    }
+}
+
+/* Fin Carousel */

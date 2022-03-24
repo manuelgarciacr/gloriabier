@@ -1,13 +1,13 @@
 /*Colors botons secció Ignasi del Homepage*/
-a.btn.btn-success{
+a.btn.btn-success {
     background-color: #292929 !important;
     border-color: #292929 !important;
-    color: var(--gray-color)!important; 
+    color: var(--gray-color) !important;
 }
 
 a.btn.btn-success:hover {
     transition: all 0.5s;
-    color: #f0c179!important;
+    color: #f0c179 !important;
 }
 
 /*Background secció Ignasi Homepage*/
@@ -35,9 +35,10 @@ section.container.py-5 {
     #template-mo-zay-hero-carousel {
         margin-top: 6rem;
     }
+
     .carousel-item {
         height: calc(100vh - 6rem);
     }
-} 
+}
 
 /* Fin Carousel */

@@ -1,17 +1,63 @@
-section {
-    height: calc(100vh - 3rem);
+.mb-7 {
+    margin-bottom: 5rem;
 }
-   
+
+section {
+    min-height: calc(100vh - 3rem);
+}
+
+section .form-control {
+    background-color: var(--yellow-color) !important;
+}
+
+section .form-floating>label {
+    left: auto;
+}
+
 section:first-of-type {
     margin-top: 3rem;
+    background-image: url('../img/contact-1.png'), url('../img/contact-2.png');
+    background-size: 300px, 100% 100px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center, bottom;
+}
+
+section:first-of-type>a {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    color: peru;
+}
+
+section:first-of-type .mapboxgl-popup-content {
+    padding-top: 1.2rem;
+}
+
+section:first-of-type a.navigate-link {
+    text-decoration: none;
+    outline: none;
+    font-family: 'Oswald', sans-serif;
+    margin-right: .5rem;
+}
+
+section:nth-of-type(2) {
+    padding-top: 4em;
+}
+
+section:nth-of-type(2) textarea {
+    height: 8em!important;
+}
+
+label[for=inputemail]{
+    float: right;
 }
 
 @media (min-width: 992px) {
     section {
-        height: calc(100vh - 6rem);
+        min-height: calc(100vh - 6rem);
     }
 
     section:first-of-type {
         margin-top: 6rem;
-    }    
-} 
+    }
+}
