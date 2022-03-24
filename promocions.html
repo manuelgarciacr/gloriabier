@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/promocions.css">
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet"
@@ -29,7 +29,7 @@ https://templatemo.com/tm-559-zay-shop
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top">
         <div class="container d-flex justify-content-between align-items-center max-width-container">
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -40,19 +40,19 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
                 id="templatemo_main_nav">
-                <div class="flex-fill d-flex justify-content">
+                <div class="flex-fill d-flex justify-content-center">
                     <ul class="nav navbar-nav d-flex mx-lg-auto nav-ul">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Inici</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item inactive">
                             <a class="nav-link" href="about.html">La Glòria</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cerveses.html">Cerveses</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Promocions</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="promocions.html">Promocions</a>
                         </li>
                     </ul>
                     <a class="navbar-brand text-success align-self-center d-flex justify-content-center a-nav"
@@ -124,11 +124,8 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </div>
 
-
-
-
     <!-- Start Categories of The Month -->
-    <div class="container py-5">
+    <div class="container categories py-5">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Cerveses artesanes</h1>
@@ -142,7 +139,7 @@ https://templatemo.com/tm-559-zay-shop
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="shop-single.html">
+                    <a href="promocions-single-1.html">
                         <img src="./assets/img/Promocions-gloria-6.jpg" class="card-img-top" alt="Pack Gloria Santíssima">
                     </a>
                     <div class="card-body">
@@ -150,7 +147,7 @@ https://templatemo.com/tm-559-zay-shop
 
                             <li class="text-muted text-right">$240.00</li>
                         </ul>
-                        <a href="promocions-single1.html" class="h2 text-decoration-none text-dark">Glòria
+                        <a href="promocions-single-1.html" class="h2 text-decoration-none text-dark">Glòria
                             Santíssima</a>
                         <p class="card-text">
                             Un lot de 12 o 24 cerveses excepcionals per gaudir de tota la experiència Glòria. Un regal
@@ -161,7 +158,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="shop-single.html">
+                    <a href="promocions-single-2.html">
                         <img src="./assets/img/promocions-gloria-1.jpg" class="card-img-top" alt="Pack Gloria picnic">
                     </a>
                     <div class="card-body">
@@ -179,7 +176,6 @@ https://templatemo.com/tm-559-zay-shop
         </div>
     </div>
     <!-- End Categories of The Month -->
-
 
     <!-- Start Featured Product -->
     <section class="bg-light">
@@ -227,7 +223,6 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!-- End Featured Product -->
 
-
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -269,11 +264,13 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">La Web</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Inici</a></li>
-                        <li><a class="text-decoration-none" href="#">Qui Som</a></li>
-                        <li><a class="text-decoration-none" href="#">Tenda</a></li>
-                        <li><a class="text-decoration-none" href="#">Merxandatge</a></li>
-                        <li><a class="text-decoration-none" href="#">Contacte</a></li>
+                        <li><a class="text-decoration-none" href="index.html">Inici</a></li>
+                        <li class="inactive"><a class="text-decoration-none" href="about.html">La Glòria</a></li>
+                        <li><a class="text-decoration-none" href="cerveses.html">Cerveses</a></li>
+                        <li class="active"><a class="text-decoration-none" href="promocions.html">Promocions</a></li>
+                        <li><a class="text-decoration-none" href="shop.html">Botiga</a></li>
+                        <li><a class="text-decoration-none" href="merchandising.html">Merchandising</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contacte</a></li>
                     </ul>
                 </div>
             </div>
@@ -317,7 +314,7 @@ https://templatemo.com/tm-559-zay-shop
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <p class=" m-0 text-left text-light">
-                        Copyright &copy; 2022 Gloria Bier.
+                        Copyright &copy; 2022 Gloria Bier. v1.0.0
                     </p>
                     <p class="text-left text-light">
                         Dissenyat per <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
@@ -327,7 +324,6 @@ https://templatemo.com/tm-559-zay-shop
         </div>
 
     </footer>
-
     <!-- End Footer -->
 
     <!-- Start Script -->

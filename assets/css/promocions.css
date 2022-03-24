@@ -1,0 +1,13 @@
+/* Carousel */
+
+div.categories {
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    div.categories {
+        margin-top: 6rem;
+    }
+}
+
+/* Fin Carousel */

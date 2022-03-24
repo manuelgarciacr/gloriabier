@@ -28,8 +28,8 @@ const calcOffsets = () => {
     console.log("Offsets:", offsets)
 }
 
-window.addEventListener('scroll', onScroll, false);
-
+window.onscroll = onScroll;
+window.onwheel = showDiffs;
 window.onresize = calcOffsets;
 
 window.addEventListener("DOMContentLoaded", function () {

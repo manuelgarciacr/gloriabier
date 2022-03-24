@@ -210,4 +210,35 @@ a.nav-link:hover {
     transition: all 0.5s;
 }
 
+.active > a {
+    cursor: default;
+    pointer-events: none;
+    text-decoration: underline;
+    font-weight: 900!important;
+    color: var(--yellow-color)!important;
+}
+
+.inactive {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.inactive > a {
+    display: inline-block;  /* For IE11/ MS Edge bug */
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.inactive > a:after {
+    font-size: 50%;
+    vertical-align: text-top;
+    margin-left: -2rem;
+    content: "En construcció";
+    line-height: 0em;
+    color: red;
+}
+
+footer .inactive > a:after {
+    color: bisque;
+}
 /* Fin del nav */
