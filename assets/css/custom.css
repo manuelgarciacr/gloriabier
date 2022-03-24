@@ -216,9 +216,8 @@ a.nav-link:hover {
 .active > a {
     cursor: default;
     pointer-events: none;
-    text-decoration: underline;
     font-weight: 900!important;
-    color: var(--yellow-color)!important;
+    opacity: 0.6;
 }
 
 .inactive {
