@@ -6,8 +6,15 @@ div.categories {
 
 @media (min-width: 992px) {
     div.categories {
-        margin-top: 6rem;
+        margin-top: 2rem;
     }
 }
 
 /* Fin Carousel */
+
+/*Centrar H1 verticalmente*/
+h1 {
+    margin-top: 120px;
+    font-size: 50px;
+}
+
