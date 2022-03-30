@@ -15,7 +15,9 @@ $(document).ready(function() {
     $('.templatemo-accordion > li > a').click(function() {
         console.log('Hello world!');
         var target =  $(this).next();
-        if(!target.hasClass('active')){
+        if(target.hasClass('active')){
+            all_panels.removeClass('active').slideUp();
+        } else {
             all_panels.removeClass('active').slideUp();
             target.addClass('active').slideDown();
         }
