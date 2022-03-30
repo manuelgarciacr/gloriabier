@@ -1,5 +1,5 @@
 section.banner{
-    background-image: url(../img/merchandising/banner-merchan.svg);
+    background-image: url('../img/merchandising/banner-merchan.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -15,7 +15,7 @@ section.banner{
 }
 
 .imagen-merch1{
-    background-image: url(../img/merchandising/mockup_tshirt_white.png);
+    background-image: url('../img/merchandising//samarreta-06.png');
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -24,12 +24,8 @@ section.banner{
     position: relative;
 }
 
-.text-imagen{
-    
-}
-
 .imagen-merch2{
-    background-image: url(../img/merchandising/guitarra-camiseta.png);
+    background-image: url('../img/merchandising/guitarra-camiseta.png');
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -39,11 +35,21 @@ section.banner{
 }
 
 .imagen-merch3{
-    background-image: url(../img/merchandising/skate-0-white.png);
+    background-image: url('../img/merchandising/skate-05.png');
     background-position: center;
     background-size: cover;
     height: 100%;
     width: 100%;
     opacity: 0.5;
     position: relative;
+}
+
+section.banner {
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    section.banner {
+        margin-top: 6rem;
+    }
 }
