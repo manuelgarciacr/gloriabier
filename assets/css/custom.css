@@ -244,3 +244,8 @@ footer .inactive > a:after {
     color: bisque;
 }
 /* Fin del nav */
+
+#top-text {
+    margin-top: 200px;
+}
+

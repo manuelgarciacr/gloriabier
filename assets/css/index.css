@@ -28,7 +28,7 @@ section.container.py-5 {
 }
 
 .carousel-item h1 {
-    font-size: 60px;
+    font-size: 100px;
 }
 
 @media (min-width: 992px) {
