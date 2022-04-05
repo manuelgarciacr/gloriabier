@@ -1,18 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Functionality</title>
+    <link rel="stylesheet" href="./assets/css/search.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Cerca"
+          autocomplete="off"
+        />
+      </form>
 
-<input type="text" class="form-control" id="inputModalSearch" name="q" onkeyup="myFunction()" placeholder="Cercar ...">
-<ul id="myUL">
-  <li><a id="#">Lager</a></li>
-  <li><a href="#">Eco</a></li>
+      <section>
+        <ul>
+          <li>Lager</li>
+          <li>Black</li>
+          <li>Delirium</li>
+          <li>Doble Malta</li>
+          <li>Eco</li>
+          <li>Franciscana</li>
+          <li>Rubia</li>
+          <li>Negra Deluxe</li>
+          <li>Morena</li>
+          <li>Fruit</li>
+          <li>Toasted</li>
+          <li>Urbana</li>
+        </ul>
 
-  <li><a href="#">Doble Malta</a></li>
-  <li><a href="#">Toasted</a></li>
+        <div id="notFound">
+          <p>No hem trobat res</p>
+        </div>
+      </section>
+    </main>
 
-  <li><a id="#">Morena</a></li>
-  <li><a id="#">Rubia</a></li>
-  <li><a href="#">Urbana</a></li>
-  <li><a href="#">Fruit</a></li>
-  <li><a href="#">Franciscana</a></li>
-  <li><a href="#">Delirium</a></li>
-  <li><a href="#">Negra Deluxe</a></li>
-</ul> 
-
+    <script src="./assets/js/search.js"></script>
+  </body>
+</html>
