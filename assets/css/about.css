@@ -1,0 +1,13 @@
+
+.bg-image {
+    height: 100vh;
+}
+
+#video {
+    text-align:center;
+    margin-top: 125px;
+}
+
+.text-success { 
+    color: #f0c179 !important;
+}

@@ -1,0 +1,18 @@
+nav li sub {
+    bottom: 0.25em;
+}
+
+footer li sub {
+    bottom: -1rem;
+    margin-left: -4rem;
+}
+
+section.content {
+    margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+    section.content {
+        margin-top: 6rem;
+    }
+}
