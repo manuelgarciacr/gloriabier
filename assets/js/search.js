@@ -1,21 +1,39 @@
-/*Search*/
+const search = document.querySelector('#search');
+const todos = document.querySelectorAll('ul li');
+const notFound = document.querySelector('#notFound');
 
-function searchFilter() {
-    // Declaro variables
-    var input, filter, name, type, a, i, data;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    name = document.getElementsByClassName("name")[0];
-    type = ul.getElementsByTagName('type');
-    
+search.addEventListener('keyup', filterFunctionality);
 
-    // Cerca i rebuig dels que no coincideixin
-    for (i = 0; i < li.length; i++) {            
-        if (name[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            name[i].style.display = "";
+function filterFunctionality(e) {
+    let searching = e.target.value.toLowerCase();
+  
+
+    [...todos].forEach(todo => {
+      let todoContent = todo.textContent;
+      if (todoContent.toLowerCase().includes(searching)) {
+        todo.style.display = 'block';
+      } else {
+        todo.style.display = 'none';
+      }
+    });
+  
+    // Mostrar que no s'ha trobat
+    let result = [...todos].every(todo => {
+      return todo.style.display === 'none';
+    });
+  
+    result === true
+      ? (notFound.style.display = 'block')
+      : (notFound.style.display = 'none');
+  
+  }
+
+    // Filtre tot
+    [...todos].forEach(todo => {
+        let todoContent = todo.textContent;
+        if (todoContent.toLowerCase().includes(searching)) {
+          todo.style.display = 'block';
         } else {
-            [i].style.display = "none";
+          todo.style.display = 'none';
         }
-    }
-}
-
+      });

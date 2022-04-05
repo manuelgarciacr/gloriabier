@@ -249,3 +249,7 @@ footer .inactive > a:after {
     margin-top: 200px;
 }
 
+/*Ocultar Search input en Homepage*/
+.fa.fa-fw.fa-search.text-dark.mr-2 {
+    display: none;
+  }
