@@ -1,4 +1,5 @@
-import { products as productsAll } from "./data.js";
+// import { products as productsAll } from "./data.js";
+import productsAll from './data.json' assert { type: "json" };
 import { filterProducts } from "./custom.js";
 
 const filtersDiv = document.querySelector("div.shop-filters");
@@ -27,12 +28,11 @@ const addProduct = (prod) => {
     img.setAttribute('alt', prod.name);
     img.setAttribute('title', prod.name);
     if (prod.url)
-        a.forEach(el => el.setAttribute("href", prod.url));
+        a.forEach(el => el.setAttribute("href", prod.url + '&sub=all'));
     else
-        a.forEach(el => el.setAttribute("href", 'shop-single.html?id=' + prod.id));
+        a.forEach(el => el.setAttribute("href", 'shop-single.html?id=' + prod.id + '&sub=' + subtype));
 
     aName.textContent = prod.name;
-    p.textContent = prod.description;
     p.textContent = prod.price + "€"
 
     // Copy template node and insert into DOM
@@ -47,7 +47,7 @@ const loadProducts = () => {
 }
 
 // Si estoy en la página de la tienda
-if (filtersDiv && container && template) {
+// if (filtersDiv && container && template) {
     // Añado eventos click a los selectores de productos
     filtersDiv.addEventListener("click", ev => {
         ev.preventDefault();
@@ -75,4 +75,4 @@ if (filtersDiv && container && template) {
     }, true);
     // Carga inicial de productos en pantalla
     loadProducts();
-}
+// }

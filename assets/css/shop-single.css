@@ -12,6 +12,10 @@ section.content {
     margin-top: 3rem;
 }
 
+div.carousel-item > div.row {
+    padding: 0 1rem;
+}
+
 @media (min-width: 992px) {
     section.content {
         margin-top: 6rem;
