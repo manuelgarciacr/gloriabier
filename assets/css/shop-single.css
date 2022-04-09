@@ -16,6 +16,10 @@ div.carousel-item > div.row {
     padding: 0 1rem;
 }
 
+section#section-related-product div.product-wap div.card{
+    cursor: pointer;
+}
+
 @media (min-width: 992px) {
     section.content {
         margin-top: 6rem;
