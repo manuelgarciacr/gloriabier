@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <title>Glòria Bïer - Gloria Promocions</title>
@@ -72,7 +72,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <div class="navbar align-self-center d-flex navbar-nowrap">
-                                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                                <div class="d-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="inputMobileSearch"
                                             placeholder="Search ...">
@@ -155,7 +155,7 @@ https://templatemo.com/tm-559-zay-shop
         <div class="row">
             <div class="col-12 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="promocions-single-1.html?id=14">
+                    <a href="promocions-single-1.html?id=14&sub=all">
                         <img src="./assets/img/Promocions-gloria-6.jpg" class="card-img-top" alt="Pack Gloria Santíssima">
                     </a>
                     <div class="card-body">
@@ -163,7 +163,7 @@ https://templatemo.com/tm-559-zay-shop
 
                             <li class="text-muted text-right">$240.00</li>
                         </ul>
-                        <a href="promocions-single-1.html?id=14" class="h2 text-decoration-none text-dark">Glòria
+                        <a href="promocions-single-1.html?id=14&sub=all" class="h2 text-decoration-none text-dark">Glòria
                             Santíssima</a>
                         <p class="card-text">
                             Un lot de 12 o 24 cerveses excepcionals per gaudir de tota la experiència Glòria. Un regal
@@ -174,14 +174,14 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <div class="col-12 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="promocions-single-2.html?id=13">
+                    <a href="promocions-single-2.html?id=13&sub=all">
                         <img src="./assets/img/promocions-gloria-1.jpg" class="card-img-top" alt="Pack Gloria picnic">
                     </a>
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li class="text-muted text-right">$480.00</li>
                         </ul>
-                        <a href="promocions-single-2.html?id=13" class="h2 text-decoration-none text-dark">Glòria Picnic</a>
+                        <a href="promocions-single-2.html?id=13&sub=all" class="h2 text-decoration-none text-dark">Glòria Picnic</a>
                         <p class="card-text">
                             Agafa el cabàs un dia de sol. Nosaltres hi posem les estovalles, les cerveses i fins i tot
                             un obridor. Glòria campestre!
@@ -212,7 +212,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <div class="row text-center py-3">
                 
-                    <div class="card h-100">
+                    <div class="card h-100 bier-links">
                         <a href="shop.html">
                             <img src="./assets/img/visites.jpg" class="card-img-top" alt="Visites Glòria Bïer">
                         </a>
@@ -220,7 +220,7 @@ https://templatemo.com/tm-559-zay-shop
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right">$240.00</li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Visita i tast a la
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Visita i tast a la
                                 nostra cerveseria</a>
                             <p class="card-text">
                                 Gloria Bïer organitza visites i tasts de cervesa a la seva microcerveseria del Poblenou,
@@ -347,6 +347,13 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="assets/js/custom.js"></script>
+    <script type="module">
+        import { setFilter } from "./assets/js/custom.js";
+        const bierLinks = document.querySelectorAll(".bier-links a");
+        bierLinks.forEach(link => link.addEventListener("click", ev => {
+            setFilter("Cerveses", "all")
+        }, true));
+    </script>    
     <!-- End Script -->
 </body>
 

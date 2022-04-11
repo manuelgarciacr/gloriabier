@@ -22,7 +22,6 @@ const relatedContainer = document.getElementById('carousel-related-product');
 const relatedSection = document.getElementById('section-related-product');
 const relatedTemplate = document.getElementById('related-template');
 const cartButtons = document.querySelector("div.cart-buttons");
-const size = document.getElementById('product-size');
 
 // Actualizar miniatura
 const setThumb = (img, idx) => {
@@ -48,7 +47,7 @@ const addProduct = (prod) => {
     img.setAttribute('alt', prod.name);
     img.setAttribute('title', prod.name);
     if (prod.url)
-        a.forEach(el => el.setAttribute("href", prod.url+ '&sub=' + subtype));
+        a.forEach(el => el.setAttribute("href", prod.url + '&sub=' + subtype));
     else
         a.forEach(el => el.setAttribute("href", 'shop-single.html?id=' + prod.id + '&sub=' + subtype));
 
@@ -65,7 +64,7 @@ const loadProducts = () => {
     const products = filterProducts(productsAll, prod.type, subtype).filter(p => p.id !== prod.id);
 
     relatedContainer.innerHTML = "";
-    if(products.length)
+    if (products.length)
         products.forEach(prod => addProduct(prod));
     else
         relatedSection.style.display = "none";
@@ -108,8 +107,6 @@ cartButtons.addEventListener("click", ev => {
 
     if (btn.value === "addtocart") {
         const idx = cart.findIndex(prod => prod.id === parseInt(id));
-        const sizeVal = size.value;
-console.log("VV", sizeVal)         
         if (idx < 0) {
             buy(productsAll, id);
             cartQ.push(q)
