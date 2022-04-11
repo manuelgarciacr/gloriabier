@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <script type="text/javascript" href="assets/js/search.js"></script>
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -114,7 +115,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <form action="" method="get" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <input type="text" onkeyup="searchFilter()" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
                     <button type="submit" class="input-group-text bg-success text-light">
                         <i class="fa fa-fw fa-search text-white"></i>
                     </button>
@@ -137,9 +138,9 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="container">
                     <div class="row p-5">
                         <div class="col-lg-12 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-white">Gloria Biër</h1>
-                                <h3 class="h2 text-white">La teva cervesa de proximitat</h3>
+                            <div class="text-align-left align-self-center" id="top-text">
+                                <h1 class="h1 text-white" id="top-text2">Gloria Biër</h1>
+                                <h3 class="h2 text-white" id="top-text3">La teva cervesa de proximitat</h3>
                             </div>
                         </div>
                     </div>
