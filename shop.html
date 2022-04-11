@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <title>Gloria Bier - Botiga en línia</title>
@@ -26,7 +26,6 @@ TemplateMo 559 Zay Shop
 https://templatemo.com/tm-559-zay-shop
 
 -->
-    <script type="text/javascript" src="assets\js\search.js"></script>
 </head>
 
 <body>
@@ -74,7 +73,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <div class="navbar align-self-center d-flex navbar-nowrap">
-                                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                                <div class="d-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="inputMobileSearch"
                                             placeholder="Search ...">
@@ -178,7 +177,7 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                         <ul class="list-inline shop-top-menu pb-3 pt-1">
                             <li class="list-inline-item">
                                 <a class="h3 text-dark text-decoration-none mr-3" href="#"></a>
@@ -193,14 +192,15 @@ https://templatemo.com/tm-559-zay-shop
                                 <a class="h3 text-dark text-decoration-none" href="#"></a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="col-md-6 pb-4">
-                        <div class="d-flex">
-                            <select class="form-control">
-                                <option>Cerca</option>
-                                <option>A a la Z</option>
-                                <option>Producte</option>
-                            </select>
+                    </div> -->
+                    <div class="col-lg-12 col-md-6 pb-4">
+                        <div class="d-flex flex-row justify-content-end">
+                            <h1 class="h2 me-3">Cerca</h1>
+                            <div class="form-outline">
+                                <input rows="5" type="search" list="search-items" id="search-id" class="form-control">
+                                <datalist id="search-items">
+                                </datalist>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -347,7 +347,7 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script type="module" src="assets/js/custom.js"></script>
     <script type="module" src="assets/js/shop.js"></script>
-    <script src="assets/js/search.js"></script>
+    <script type="module" src="assets/js/search.js"></script>
     <!-- End Script -->
 </body>
 
