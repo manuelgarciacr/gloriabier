@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <script type="text/javascript" href="assets/js/search.js"></script>
+    <!-- <script type="text/javascript" href="assets/js/search.js"></script> -->
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -72,7 +72,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <div class="navbar align-self-center d-flex navbar-nowrap">
-                                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                                <div class="d-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="inputMobileSearch"
                                             placeholder="Search ...">
@@ -201,10 +201,10 @@ https://templatemo.com/tm-559-zay-shop
                 <h5 class="text-center mt-3 mb-3"></h5>
                 <p class="text-center"><a class=""></a></p>
             </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./assets/img/lager_home2.jpg" class="rounded-circle img-fluid border"></a>
+            <div class="col-12 col-md-4 p-5 mt-3 bier-links">
+                <a href="shop.html"><img src="./assets/img/lager_home2.jpg" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Cobreix-te de glòria</h2>
-                <p class="text-center"><a class="btn btn-success">Botiga en línia</a></p>
+                <p class="text-center"><a href="shop.html" class="btn btn-success">Botiga en línia</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src="" class="rounded-circle img-fluid border"></a>
@@ -217,7 +217,7 @@ https://templatemo.com/tm-559-zay-shop
 
 
     <!-- Start Featured Product -->
-    <section class="bg-light">
+    <section class="bg-light featured">
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
@@ -230,15 +230,15 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 bier-links">
+                        <a href="shop.html">
                             <img src="./assets/img/beer-g3e8a34c9a_1280.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia
                                 deserunt.
@@ -248,15 +248,15 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 packs-links">
+                        <a href="shop.html">
                             <img src="./assets/img/beer2.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
                             <p class="card-text">
                                 Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo
                                 ullamcorper.
@@ -266,15 +266,15 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 bier-links">
+                        <a href="shop.html">
                             <img src="./assets/img/tiradors_home3.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Localitza la teva
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Localitza la teva
                                 Gloria</a>
                             <p class="card-text">
                                 Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et
@@ -398,6 +398,17 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script type="module" src="assets/js/custom.js"></script>
+    <script type="module">
+        import { setFilter } from "./assets/js/custom.js";
+        const bierLinks = document.querySelectorAll(".bier-links a");
+        const packsLinks = document.querySelectorAll(".packs-links a");
+        bierLinks.forEach(link => link.addEventListener("click", ev => {
+            setFilter("Cerveses", "all")
+        }, true));
+        packsLinks.forEach(link => link.addEventListener("click", ev => {
+            setFilter("Packs", "all")
+        }, true));
+    </script>    
     <!-- End Script -->
 </body>
 
