@@ -15,7 +15,7 @@ button:hover {
 }
  
 .popup-wrapper {
-    background-image: url("assets/img/bg\ popup.jpg");
+    background-image: url("../img/bgpopup.jpg");
     position: fixed;
     top: 0;
     left: 0;
