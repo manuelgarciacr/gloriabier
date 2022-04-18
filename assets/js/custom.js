@@ -11,37 +11,71 @@ cartBadge.innerText = cart.length || "";
 
 //buy
 export function buy(products, id) {
-    products.forEach(element => element.id === id ? cart.push(element) : null)
+  products.forEach((element) =>
+    element.id === id ? cart.push(element) : null
+  );
 }
 
 //filtrar per categories
 export function getProductsFromCategory(products, category) {
-    const productsCategory = products.filter(element => element.type === category);
-    return productsCategory
-};
+  const productsCategory = products.filter(
+    (element) => element.type === category
+  );
+  return productsCategory;
+}
 
 //filtrar per subtypes
 export function getProductsFromSubtype(products, category) {
-    const productsSubtype = products.filter(element => element.subtype === category);
-    return productsSubtype
+  const productsSubtype = products.filter(
+    (element) => element.subtype === category
+  );
+  return productsSubtype;
 }
 
 // Filtrar productos por type y subtype
 export const filterProducts = (products, type, subtype) => {
-    let filteredProducts = getProductsFromCategory(products, type);
-    if (subtype !== "all")
-        filteredProducts = getProductsFromSubtype(filteredProducts, subtype);
-    return filteredProducts
-}
+  let filteredProducts = getProductsFromCategory(products, type);
+  if (subtype !== "all")
+    filteredProducts = getProductsFromSubtype(filteredProducts, subtype);
+  return filteredProducts;
+};
 
 export const setFilter = (type, subtype) => {
-    localStorage.setItem("type", type);
-    localStorage.setItem("subtype", subtype)
-}
+  localStorage.setItem("type", type);
+  localStorage.setItem("subtype", subtype);
+};
 
 export const getFilter = () => {
-    const type = localStorage.getItem("type") || "Cerveses";
-    const subtype = localStorage.getItem("subtype") || "all";
-    return {'type': type, 'subtype': subtype}
-}
+  const type = localStorage.getItem("type") || "Cerveses";
+  const subtype = localStorage.getItem("subtype") || "all";
+  return { type: type, subtype: subtype };
+};
 
+//subtotal
+function subtotal() {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].type === "Cerveses") {
+        subtotal.Cerveses.value += cart[i].price;
+      }
+      if (cart[i].type === "Packs") {
+        subtotal.Packs.value += cart[i].price;
+      }
+      if (cart[i].type === "Merchandising") {
+        subtotal.Merchandising.value += cart[i].price; 
+      }
+    }
+    return subtotal;
+    //console.table(subtotal)
+  }
+
+//total
+// export function calculateTotal() {
+//   for (let i = 0; i < cart.length; i++) {
+//     total = cart[i].value + total;
+//   }
+//   return total;
+// }
+
+buy(products,2),
+buy(products,4),
+console.log(cart);

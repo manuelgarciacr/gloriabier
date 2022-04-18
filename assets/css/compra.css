@@ -1,0 +1,8 @@
+#banner {
+ background-repeat: no-repeat; 
+ background-size: cover;
+ background: #f0c179;
+}
+.pt-5 {
+    padding-top: 1rem;
+}
