@@ -24,6 +24,7 @@ section.container.py-5 {
 
 .carousel-item {
     background-repeat: no-repeat;
+    background-size: cover;
     height: calc(100vh - 3rem);
 }
 
