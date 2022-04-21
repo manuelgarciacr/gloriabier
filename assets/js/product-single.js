@@ -110,6 +110,7 @@ cartButtons.addEventListener("click", ev => {
         if (idx < 0) {
             buy(productsAll, id);
             cartQ.push(q)
+            pintarCarrito() //afegit 
         } else {
             cartQ[idx] = cartQ[idx] + q;
         }

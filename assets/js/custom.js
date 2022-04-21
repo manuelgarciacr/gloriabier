@@ -6,6 +6,7 @@ const cartQJSON = localStorage.getItem("cartQ") || "[]";
 export const cartQ = JSON.parse(cartQJSON);
 const cartBadge = document.querySelector("span.cart.badge");
 cartBadge.innerText = cart.length || "";
+import productsAll from './data.json' assert { type: "json" };
 //
 // End Persistence
 
@@ -52,30 +53,35 @@ export const getFilter = () => {
 };
 
 //subtotal
-function subtotal() {
+function subtotal(cart, cartQ) {
+  const res = {
+    'cerveses': 0,
+    'packs': 0,
+    'merchandising': 0
+};
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].type === "Cerveses") {
-        subtotal.Cerveses.value += cart[i].price;
+        res.cerveses += cart[i].price * cartQ[i];
       }
       if (cart[i].type === "Packs") {
-        subtotal.Packs.value += cart[i].price;
+        res.packs += cart[i].price * cartQ[i];
       }
       if (cart[i].type === "Merchandising") {
-        subtotal.Merchandising.value += cart[i].price; 
+        res.merchandising += cart[i].price; 
       }
     }
     return subtotal;
-    //console.table(subtotal)
+    console.table(subtotal)
   }
 
 //total
-// export function calculateTotal() {
-//   for (let i = 0; i < cart.length; i++) {
-//     total = cart[i].value + total;
-//   }
-//   return total;
-// }
+function calculateTotal() {
+for (let i = 0; i < cartQ.length; i++) {
+let total = cartQ[i].value + total;
+}
+return total;
+}
 
-buy(products,2),
-buy(products,4),
+buy(productsAll, 2),
 console.log(cart);
+console.log(cartQ);
