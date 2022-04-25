@@ -16,14 +16,16 @@ export function buy(products, id) {
     element.id === id ? cart.push(element) : null
   );
   cart.forEach((element) =>
-  cartQ.push(element))
+  cartQ.push(element),
+  subtotal(),
+  pintarcarrito())
 }
 
 //subtotal
-export function subtotal(cartQ, id) {
-  for (let i = 0; i < cartQ.length; i++) {
+export function subtotal(cartQ, i) {
+  cartQ.forEach((element) => {
     let total = cartQ[i].value + total;
-    }
+    })
     return total;
     }
 
