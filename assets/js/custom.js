@@ -15,7 +15,17 @@ export function buy(products, id) {
   products.forEach((element) =>
     element.id === id ? cart.push(element) : null
   );
+  cart.forEach((element) =>
+  cartQ.push(element))
 }
+
+//subtotal
+export function subtotal(cartQ, id) {
+  for (let i = 0; i < cartQ.length; i++) {
+    let total = cartQ[i].value + total;
+    }
+    return total;
+    }
 
 //filtrar per categories
 export function getProductsFromCategory(products, category) {
@@ -52,35 +62,6 @@ export const getFilter = () => {
   return { type: type, subtype: subtype };
 };
 
-//subtotal
-function subtotal(cart, cartQ) {
-  const res = {
-    'cerveses': 0,
-    'packs': 0,
-    'merchandising': 0
-};
-    for (let i = 0; i < cart.length; i++) {
-      if (cart[i].type === "Cerveses") {
-        res.cerveses += cart[i].price * cartQ[i];
-      }
-      if (cart[i].type === "Packs") {
-        res.packs += cart[i].price * cartQ[i];
-      }
-      if (cart[i].type === "Merchandising") {
-        res.merchandising += cart[i].price; 
-      }
-    }
-    return subtotal;
-    console.table(subtotal)
-  }
-
-//total
-function calculateTotal() {
-for (let i = 0; i < cartQ.length; i++) {
-let total = cartQ[i].value + total;
-}
-return total;
-}
 
 buy(productsAll, 2),
 console.log(cart);
