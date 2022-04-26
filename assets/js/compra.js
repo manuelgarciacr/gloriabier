@@ -44,15 +44,11 @@ const printList = () => {
     // Función para imprimir total
     const printTotal = (description, total, llista) => {
         const row = document.createElement("tr");
-        row.innerHTML = `<td colspan="4">Total ${description}</td><td>${total}</td>`;  
+        row.innerHTML = `<td colspan="6">Total ${description}</td><td>${total}</td>`;  
         llista.appendChild(row) ;
     }
-    // Función para eliminar producto
-    const fnRemove = (id) => {
-        alert(id)
-    }
-    // Variables para acumular subtotales
-    let category = cart[0].type;
+     // Variables para acumular subtotales
+    let category = sortedCart[0].type;
     let subtotal = 0;
     let total = 0;
     
@@ -72,12 +68,18 @@ const printList = () => {
         const name = `<td>${item.name}</td>`;
         const price = `<td>${item.price}</td>`;
         const q = `<td>${item.q}</td>`;
+        const up =  `<td><button class="up" value="${item.id}">+</button></td>`
+        const down =  `<td><button class="down" value="${item.id}">-</button></td>`
         const amount = `<td>${item.q * item.price}</td>`;
         // Botó per eliminar producte
-        const remove = `<button value="${item.id}">Eliminar</button>`
+        const remove = `<button class="remove" value="${item.id}">Eliminar</button>`
     
         // Muntem el detall i l'imprimim
-        row.innerHTML = id + name + price + q + amount + remove;
+        row.setAttribute("id", "row-" + item.id);
+        row.innerHTML = id + name + price + q + up + down + amount + remove;
+        // Si la cantidad es cero tacho el producto
+        if (item.q <= 0)
+            row.style.textDecoration = "line-through";
         llista.appendChild(row);
     
         // Acumulem al subtotal
@@ -92,7 +94,7 @@ const printList = () => {
     printTotal("compra", total, llista);
     
     // Añado eventos a los botones para eliminar productos
-    const removeButtons = llista.querySelectorAll("button");
+    const removeButtons = llista.querySelectorAll("button.remove");
     
     removeButtons.forEach( btn => btn.addEventListener("click", ev => {
         ev.preventDefault();
@@ -109,6 +111,42 @@ const printList = () => {
             localStorage.setItem("cart", JSON.stringify(cart));
             localStorage.setItem("cartQ", JSON.stringify(cartQ));
             cartBadge.innerText = cart.length ? cart.length : '';
+            printList();
+        }
+    }))
+
+    // Añado eventos a los botones para incrementar cantidades
+    const upButtons = llista.querySelectorAll("button.up");
+    
+    upButtons.forEach( btn => btn.addEventListener("click", ev => {
+        ev.preventDefault();
+
+        const id = ev.target.value;
+        // Busco el índice del producto en el carrito
+        const idx = cart.findIndex(prod => prod.id === parseInt(id));
+        
+        if (idx >=0) {
+            // Aumento la cantidad del producto
+            cartQ[idx]++;
+            localStorage.setItem("cartQ", JSON.stringify(cartQ));
+            printList();
+        }
+    }))
+
+    // Añado eventos a los botones para decrementar cantidades
+    const downButtons = llista.querySelectorAll("button.down");
+    
+    downButtons.forEach( btn => btn.addEventListener("click", ev => {
+        ev.preventDefault();
+
+        const id = ev.target.value;
+        // Busco el índice del producto en el carrito
+        const idx = cart.findIndex(prod => prod.id === parseInt(id));
+
+        if (idx >=0 & cartQ[idx] > 0) {
+            // Decremento la cantidad del producto
+            cartQ[idx]--;
+            localStorage.setItem("cartQ", JSON.stringify(cartQ));
             printList();
         }
     }))
