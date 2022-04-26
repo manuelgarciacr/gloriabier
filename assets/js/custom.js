@@ -6,65 +6,41 @@ const cartQJSON = localStorage.getItem("cartQ") || "[]";
 export const cartQ = JSON.parse(cartQJSON);
 const cartBadge = document.querySelector("span.cart.badge");
 cartBadge.innerText = cart.length || "";
-import productsAll from './data.json' assert { type: "json" };
 //
 // End Persistence
 
 //buy
 export function buy(products, id) {
-  products.forEach((element) =>
-    element.id === id ? cart.push(element) : null
-  );
-  cart.forEach((element) =>
-  cartQ.push(element),
-  subtotal(),
-  pintarcarrito())
+    products.forEach(element => element.id === id ? cart.push(element) : null)
 }
-
-//subtotal
-export function subtotal(cartQ, i) {
-  cartQ.forEach((element) => {
-    let total = cartQ[i].value + total;
-    })
-    return total;
-    }
 
 //filtrar per categories
 export function getProductsFromCategory(products, category) {
-  const productsCategory = products.filter(
-    (element) => element.type === category
-  );
-  return productsCategory;
-}
+    const productsCategory = products.filter(element => element.type === category);
+    return productsCategory
+};
 
 //filtrar per subtypes
 export function getProductsFromSubtype(products, category) {
-  const productsSubtype = products.filter(
-    (element) => element.subtype === category
-  );
-  return productsSubtype;
+    const productsSubtype = products.filter(element => element.subtype === category);
+    return productsSubtype
 }
 
 // Filtrar productos por type y subtype
 export const filterProducts = (products, type, subtype) => {
-  let filteredProducts = getProductsFromCategory(products, type);
-  if (subtype !== "all")
-    filteredProducts = getProductsFromSubtype(filteredProducts, subtype);
-  return filteredProducts;
-};
+    let filteredProducts = getProductsFromCategory(products, type);
+    if (subtype !== "all")
+        filteredProducts = getProductsFromSubtype(filteredProducts, subtype);
+    return filteredProducts
+}
 
 export const setFilter = (type, subtype) => {
-  localStorage.setItem("type", type);
-  localStorage.setItem("subtype", subtype);
-};
+    localStorage.setItem("type", type);
+    localStorage.setItem("subtype", subtype)
+}
 
 export const getFilter = () => {
-  const type = localStorage.getItem("type") || "Cerveses";
-  const subtype = localStorage.getItem("subtype") || "all";
-  return { type: type, subtype: subtype };
-};
-
-
-buy(productsAll, 2),
-console.log(cart);
-console.log(cartQ);
+    const type = localStorage.getItem("type") || "Cerveses";
+    const subtype = localStorage.getItem("subtype") || "all";
+    return {'type': type, 'subtype': subtype}
+}

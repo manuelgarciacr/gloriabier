@@ -1,36 +1,126 @@
 import { cart, cartQ } from "./custom.js";
-import productsAll from "./data.json" assert { type: "json" };
-import { buy } from "./custom.js";
-const templateCarrito=document.getElementById("carrito")
-const fragment = document.createDocumentFragment()
-const pintarCarrito = () => {
-const llista = document.getElementById("items");
-cart.forEach((item, idx) => {
-  //creem la cela i la fila
-  // let row = document.createElement("tr");
-  // let cell = document.createElement("td");
-  // //preu per item i quantitat
-  // cell.innerHTML(item.price * cartQ[idx]),
-  // row.appendChild(cell),
-  // llista.appendChild(row),
-  // //l'id del producte
-  // cell.innerHTML(item.id),
-  // row.appendChild(cell),
-  // llista.appendChild(row),
-  // //preu de l'item
-  // cell.innerHTML(item.price),
-  // row.appendChild(cell),
-  // llista.appendChild(row),
-  // //quantitat
-  // cell.innerHTML(item.quantity),
-  // row.appendChild(cell),
-  // llista.appendChild(row),
-  
-  templateCarrito.querySelector("th").textContent = item.id;
-  templateCarrito.querySelectorAll("td")[0].textContent = item.name;
-  templateCarrito.querySelectorAll("td")[1].textContent = item.price;
-  templateCarrito.querySelectorAll("td")[2].textContent = item.quantity;
-  templateCarrito.querySelector('span').textContent = (item.price * cartQ[idx])
-  const clone = templateCarrito.cloneNode(true);
-  fragment.appendChild(clone);
-}, llista.appendChild(fragment))}
+
+// Función para finalizar compra
+const checkout = () => {
+    const llista = document.getElementById("items");
+    const cartBadge = document.querySelector("span.cart.badge");
+     
+    // Vacío el carrito
+    cart.splice(0);
+    cartQ.splice(0);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cartQ", JSON.stringify(cartQ));
+    cartBadge.innerText = '';
+    
+    // Vacío la lista
+    llista.innerHTML = "";
+
+    llista.innerHTML = "<h1>¡¡ Compra finalitzada !!</h1>"
+}
+
+// Función para imprimir la lista
+const printList = () => {
+    const llista = document.getElementById("items");
+
+    // Vacío la lista
+    llista.innerHTML = "";
+
+    // Si el carrito está vacío no imprimo nada
+    if (cart.length === 0)
+        return;
+
+    // Añado las cantidades a los productos del carrito en un nuevo array 
+    //   y lo ordeno por categoría
+    const sortedCart = cart.map((prod, idx) => ({...prod, 'q': cartQ[idx]}))
+    .sort((a, b) => {
+            if (a.type > b.type)
+                return 1;
+            else if (a.type < b.type)
+                return -1;
+            else
+                return 0;
+    });
+    
+    // Función para imprimir total
+    const printTotal = (description, total, llista) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td colspan="4">Total ${description}</td><td>${total}</td>`;  
+        llista.appendChild(row) ;
+    }
+    // Función para eliminar producto
+    const fnRemove = (id) => {
+        alert(id)
+    }
+    // Variables para acumular subtotales
+    let category = cart[0].type;
+    let subtotal = 0;
+    let total = 0;
+    
+    sortedCart.forEach(item => {
+        // Si cambiamos de categoría imprimimos el subtotal de la categoría anterior
+        // acumulamos en el total e inicializamos subtotal
+        if (item.type !== category) {
+            printTotal(category, subtotal, llista);
+            total += subtotal;
+            category = item.type;
+            subtotal = 0; 
+        }
+    
+        //creem la fila i les cel·les
+        const row = document.createElement("tr");
+        const id = `<td>${item.id}</td>`;
+        const name = `<td>${item.name}</td>`;
+        const price = `<td>${item.price}</td>`;
+        const q = `<td>${item.q}</td>`;
+        const amount = `<td>${item.q * item.price}</td>`;
+        // Botó per eliminar producte
+        const remove = `<button value="${item.id}">Eliminar</button>`
+    
+        // Muntem el detall i l'imprimim
+        row.innerHTML = id + name + price + q + amount + remove;
+        llista.appendChild(row);
+    
+        // Acumulem al subtotal
+        subtotal += item.q * item.price;
+    });
+    
+    // Imprimo el último subtotal
+    printTotal(category, subtotal, llista);
+    total += subtotal;
+    
+    // Imprimo el total
+    printTotal("compra", total, llista);
+    
+    // Añado eventos a los botones para eliminar productos
+    const removeButtons = llista.querySelectorAll("button");
+    
+    removeButtons.forEach( btn => btn.addEventListener("click", ev => {
+        ev.preventDefault();
+
+        const cartBadge = document.querySelector("span.cart.badge");
+        const id = ev.target.value;
+        // Busco el índice del producto en el carrito
+        const idx = cart.findIndex(prod => prod.id === parseInt(id));
+
+        if (idx >=0) {
+            // Elimino el producto del carrito
+            cart.splice(idx, 1);
+            cartQ.splice(idx, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("cartQ", JSON.stringify(cartQ));
+            cartBadge.innerText = cart.length ? cart.length : '';
+            printList();
+        }
+    }))
+
+    // Añado botón para finaliar compra
+    llista.insertAdjacentHTML('beforeend', '<button id="checkout">FINALITZAR COMPRA</button>');
+    const btn = llista.querySelector("button#checkout");
+
+    btn.addEventListener("click", ev => {
+        ev.preventDefault();
+        checkout()
+    })
+}
+
+printList();

@@ -110,18 +110,18 @@ cartButtons.addEventListener("click", ev => {
         if (idx < 0) {
             buy(productsAll, id);
             cartQ.push(q)
-            pintarCarrito() //afegit 
+            // pintarCarrito() //afegit 
         } else {
             cartQ[idx] = cartQ[idx] + q;
         }
     }
 
-    if (btn.value === "buy") {
-        console.table(cart);
-        console.table(cartQ);
-        cart.splice(0);
-        cartQ.splice(0);
-    }
+    // if (btn.value === "buy") {
+    //     console.table(cart);
+    //     console.table(cartQ);
+    //     cart.splice(0);
+    //     cartQ.splice(0);
+    // }
 
     localStorage.setItem("cart", JSON.stringify(cart));
     localStorage.setItem("cartQ", JSON.stringify(cartQ));
