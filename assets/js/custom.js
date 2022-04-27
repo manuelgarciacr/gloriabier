@@ -44,4 +44,3 @@ export const getFilter = () => {
     const subtype = localStorage.getItem("subtype") || "all";
     return {'type': type, 'subtype': subtype}
 }
-
