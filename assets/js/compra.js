@@ -15,7 +15,7 @@ const checkout = () => {
     // Vacío la lista
     llista.innerHTML = "";
 
-    llista.innerHTML = "<h1>¡¡ Compra finalitzada !!</h1>"
+    llista.innerHTML = '<tr><td colspan="8"><h1 class="text-center mt-3">¡¡ Compra finalitzada !!</h1></td></tr>'
 }
 
 // Función para imprimir la lista
