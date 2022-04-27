@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <!-- <script type="text/javascript" href="assets/js/search.js"></script> -->
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -71,7 +72,7 @@ https://templatemo.com/tm-559-zay-shop
                         </li>
                         <li>
                             <div class="navbar align-self-center d-flex navbar-nowrap">
-                                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                                <div class="d-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="inputMobileSearch"
                                             placeholder="Search ...">
@@ -84,7 +85,7 @@ https://templatemo.com/tm-559-zay-shop
                                     data-bs-target="#templatemo_search">
                                     <i class="fa fa-fw fa-search text-dark mr-2"></i>
                                 </a>
-                                <a class="nav-icon position-relative text-decoration-none" href="#">
+                                <a class="nav-icon position-relative text-decoration-none" href="./compra.html">
                                     <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                                     <span
                                         class="cart position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
@@ -114,7 +115,7 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <form action="" method="get" class="modal-content modal-body border-0 p-0">
                 <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <input type="text" onkeyup="searchFilter()" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
                     <button type="submit" class="input-group-text bg-success text-light">
                         <i class="fa fa-fw fa-search text-white"></i>
                     </button>
@@ -133,19 +134,19 @@ https://templatemo.com/tm-559-zay-shop
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" class="bg-image" style="background-image: url('/assets/img/ban1.jpg');">
+            <div class="carousel-item active" class="bg-image" style="background-image: url('./assets/img/ban1.jpg');">
                 <div class="container">
                     <div class="row p-5">
                         <div class="col-lg-12 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-white">Gloria Biër</h1>
-                                <h3 class="h2 text-white">La teva cervesa de proximitat</h3>
+                            <div class="text-align-left align-self-center" id="top-text">
+                                <h1 class="h1 text-white" id="top-text2">Gloria Biër</h1>
+                                <h3 class="h2 text-white" id="top-text3">La teva cervesa de proximitat</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" class="bg-image" style="background-image: url('/assets/img/ban2.jpg');">
+            <div class="carousel-item" class="bg-image" style="background-image: url('./assets/img/ban2.jpg');">
                 <div class="container">
                     <div class="row p-5">
                         <div class="col-lg-12 mb-0 d-flex align-items-center">
@@ -157,7 +158,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" class="bg-image" style="background-image: url('/assets/img/ban3.jpg');">
+            <div class="carousel-item" class="bg-image" style="background-image: url('./assets/img/ban3.jpg');">
                 <div class="container">
                     <div class="row p-5">
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
@@ -200,10 +201,10 @@ https://templatemo.com/tm-559-zay-shop
                 <h5 class="text-center mt-3 mb-3"></h5>
                 <p class="text-center"><a class=""></a></p>
             </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./assets/img/lager_home2.jpg" class="rounded-circle img-fluid border"></a>
+            <div class="col-12 col-md-4 p-5 mt-3 bier-links">
+                <a href="shop.html"><img src="./assets/img/lager_home2.jpg" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Cobreix-te de glòria</h2>
-                <p class="text-center"><a class="btn btn-success">Botiga en línia</a></p>
+                <p class="text-center"><a href="shop.html" class="btn btn-success">Botiga en línia</a></p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
                 <a href="#"><img src="" class="rounded-circle img-fluid border"></a>
@@ -216,7 +217,7 @@ https://templatemo.com/tm-559-zay-shop
 
 
     <!-- Start Featured Product -->
-    <section class="bg-light">
+    <section class="bg-light featured">
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
@@ -229,15 +230,15 @@ https://templatemo.com/tm-559-zay-shop
             </div>
             <div class="row">
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 bier-links">
+                        <a href="shop.html">
                             <img src="./assets/img/beer-g3e8a34c9a_1280.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Gloria Lager</a>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia
                                 deserunt.
@@ -247,15 +248,15 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 packs-links">
+                        <a href="shop.html">
                             <img src="./assets/img/beer2.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Packs exclusius</a>
                             <p class="card-text">
                                 Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo
                                 ullamcorper.
@@ -265,15 +266,15 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
+                    <div class="card h-100 bier-links">
+                        <a href="shop.html">
                             <img src="./assets/img/tiradors_home3.jpg" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
                                 <li class="text-muted text-right"></li>
                             </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Localitza la teva
+                            <a href="shop.html" class="h2 text-decoration-none text-dark">Localitza la teva
                                 Gloria</a>
                             <p class="card-text">
                                 Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et
@@ -378,8 +379,8 @@ https://templatemo.com/tm-559-zay-shop
         <div class="w-100 bg-black py-3">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <p class=" m-0 text-left text-light">
-                        Copyright &copy; 2022 Gloria Bier. v2.0.0
+                    <p class=" m-0 text-left text-light version">
+                        Copyright &copy; 2022 Gloria Bier.
                     </p>
                     <p class="text-left text-light">
                         Dissenyat per <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
@@ -396,7 +397,18 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script type="module" src="assets/js/custom.js"></script>
+    <script type="module">
+        import { setFilter } from "./assets/js/custom.js";
+        const bierLinks = document.querySelectorAll(".bier-links a");
+        const packsLinks = document.querySelectorAll(".packs-links a");
+        bierLinks.forEach(link => link.addEventListener("click", ev => {
+            setFilter("Cerveses", "all")
+        }, true));
+        packsLinks.forEach(link => link.addEventListener("click", ev => {
+            setFilter("Packs", "all")
+        }, true));
+    </script>    
     <!-- End Script -->
 </body>
 

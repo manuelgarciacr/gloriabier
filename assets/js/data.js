@@ -1,12 +1,12 @@
 // estructura dades
-var products = [
+export const products = [
     {
         id: 1,
         name: 'Black Gloria',
         price: 10.5,
         type: 'Cerveses',
         subtype: 'Negres',
-        img: '../img/cerveses/Black.webp'
+        img: 'assets/img/cerveses/Black.webp'
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ var products = [
         price: 12.25,
         type: 'Cerveses',
         subtype: 'Rosses',
-        img: '../img/cerveses/Delirium.webp'
+        img: 'assets/img/cerveses/Delirium.webp'
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ var products = [
         price: 10.75,
         type: 'Cerveses',
         subtype: 'Torrades',
-        img: '../img/cerveses/Doble malta.webp'
+        img: 'assets/img/cerveses/Doble malta.webp'
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ var products = [
         price: 5.5,
         type: 'Cerveses',
         subtype: 'IPAs',
-        img: '../img/cerveses/ECO.webp'
+        img: 'assets/img/cerveses/ECO.webp'
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ var products = [
         price: 9.5,
         type: 'Cerveses',
         subtype: 'Rosses',
-        img: '../img/cerveses/Franciscana.webp'
+        img: 'assets/img/cerveses/Franciscana.webp'
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ var products = [
         price: 8.75,
         type: 'Cerveses',
         subtype: 'IPAs',
-        img: '../img/cerveses/Fruit.webp'
+        img: 'assets/img/cerveses/Fruit.webp'
     },
     {
         id: 7,
@@ -54,7 +54,7 @@ var products = [
         price: 9,
         type: 'Cerveses',
         subtype: 'Rosses',
-        img: '../img/cerveses/Lager.webp'
+        img: 'assets/img/cerveses/Lager.webp'
     },
     {
         id: 8,
@@ -62,7 +62,7 @@ var products = [
         price: 6.75,
         type: 'Cerveses',
         subtype: 'Torrades',
-        img: '../img/cerveses/Morena.webp'
+        img: 'assets/img/cerveses/Morena.webp'
     },
     {
         id: 9,
@@ -70,7 +70,7 @@ var products = [
         price: 12.75,
         type: 'Cerveses',
         subtype: 'Negres',
-        img: '../img/cerveses/Negra Deluxe.webp'
+        img: 'assets/img/cerveses/Negra Deluxe.webp'
     },
     {
         id: 10,
@@ -78,7 +78,7 @@ var products = [
         price: 12,
         type: 'Cerveses',
         subtype: 'Rosses',
-        img: '../img/cerveses/Rubia.webp'
+        img: 'assets/img/cerveses/Rubia.webp'
     },
     {
         id: 11,
@@ -86,7 +86,7 @@ var products = [
         price: 12.75,
         type: 'Cerveses',
         subtype: 'Torrades',
-        img: '../img/cerveses/Toasted.webp'
+        img: 'assets/img/cerveses/Toasted.webp'
     },
     {
         id: 12,
@@ -94,23 +94,25 @@ var products = [
         price: 7,
         type: 'Cerveses',
         subtype: 'IPAs',
-        img: '../img/cerveses/Urbana.webp'
+        img: 'assets/img/cerveses/Urbana.webp'
     },
     {
         id: 13,
-        name: 'Gloria Picnic',
-        price: 15,
+        name: 'Glòria Pícnic',
+        price: 480,
         type: 'Packs',
-        subtype: 'Gloria Picnic',
-        img: ['../img/packs/promo-5.jpg', '../img/packs/promo-6.jpg', '../img/packs/promo-7.jpg', '../img/packs/promo-8.jpg']
+        subtype: 'Glòria Pícnic',
+        img: ['assets/img/packs/promo-5.jpg', 'assets/img/packs/promo-6.jpg', 'assets/img/packs/promo-7.jpg', 'assets/img/packs/promo-8.jpg'],
+        url: 'promocions-single-2.html?id=13'
     },
     {
         id: 14,
-        name: 'Gloria Santissima',
-        price: 15,
+        name: 'Glòria Santíssima',
+        price: 240,
         type: 'Packs',
-        subtype: 'Gloria Santissima',
-        img: ['../img/packs/promo-1.jpg', '../img/packs/promo-2.jpg', '../img/packs/promo-3.jpg', '../img/packs/promo-4.jpg']
+        subtype: 'Glòria Santíssima',
+        img: ['assets/img/packs/promo-1.jpg', 'assets/img/packs/promo-2.jpg', 'assets/img/packs/promo-3.jpg', 'assets/img/packs/promo-4.jpg'],
+        url: 'promocions-single-1.html?id=14'
     },
     {
         id: 15,
@@ -118,7 +120,7 @@ var products = [
         price: 20,
         type: 'Merchandising',
         subtype: 'Samarretes',
-        img: ['../img/merchandising/samarreta-01.png', '../img/merchandising/samarreta-02.png', '../img/merchandising/samarreta-03.png']
+        img: ['assets/img/merchandising/samarreta-01.png', 'assets/img/merchandising/samarreta-02.png', 'assets/img/merchandising/samarreta-03.png']
     },
     {
         id: 16,
@@ -126,7 +128,7 @@ var products = [
         price: 20,
         type: 'Merchandising',
         subtype: 'Samarretes',
-        img: ['../img/merchandising/samarreta-04.png', '../img/merchandising/samarreta-05.png', '../img/merchandising/samarreta-06.png']
+        img: ['assets/img/merchandising/samarreta-04.png', 'assets/img/merchandising/samarreta-05.png', 'assets/img/merchandising/samarreta-06.png']
     },
     {
         id: 17,
@@ -134,31 +136,31 @@ var products = [
         price: 200,
         type: 'Merchandising',
         subtype: 'Exclusiu',
-        img: '../img/merchandising/guitarra-camiseta.png'
+        img: 'assets/img/merchandising/guitarra-camiseta.png'
     },
     {
         id: 18,
         name: 'Skate Blanc Gloria',
         price: 79,
         type: 'Merchandising',
-        subtype: 'Accesoris',
-        img: ['../img/merchandising/skate-01.png', '../img/merchandising/skate-02.png', '../img/merchandising/skate-03.png']
+        subtype: 'Accessoris',
+        img: ['assets/img/merchandising/skate-01.png', 'assets/img/merchandising/skate-02.png', 'assets/img/merchandising/skate-03.png']
     },
     {
         id: 19,
         name: 'Skate Groc Gloria',
         price: 79,
         type: 'Merchandising',
-        subtype: 'Accesoris',
-        img: ['../img/merchandising/skate-04.png', '../img/merchandising/skate-05.png', '../img/merchandising/skate-06.png']
+        subtype: 'Accessoris',
+        img: ['assets/img/merchandising/skate-04.png', 'assets/img/merchandising/skate-05.png', 'assets/img/merchandising/skate-06.png']
     },
     {
         id: 20,
         name: 'Gerra Cervesa Gloria',
         price: 25,
         type: 'Merchandising',
-        subtype: 'Accesoria',
-        img: '../img/merchandising/beer.png'
+        subtype: 'Accessoris',
+        img: 'assets/img/merchandising/beer.png'
     }
 ]
 

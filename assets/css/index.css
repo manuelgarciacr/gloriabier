@@ -24,11 +24,12 @@ section.container.py-5 {
 
 .carousel-item {
     background-repeat: no-repeat;
+    background-size: cover;
     height: calc(100vh - 3rem);
 }
 
 .carousel-item h1 {
-    font-size: 60px;
+    font-size: 100px;
 }
 
 @media (min-width: 992px) {
