@@ -68,18 +68,19 @@ const printList = () => {
         const name = `<td>${item.name}</td>`;
         const price = `<td>${item.price}</td>`;
         const q = `<td>${item.q}</td>`;
-        const up =  `<td><button class="up" value="${item.id}">+</button></td>`
-        const down =  `<td><button class="down" value="${item.id}">-</button></td>`
+        const up =  `<td><button class="up btn" value="${item.id}"></button></td>`
+        const down =  `<td><button class="down btn btn-danger" value="${item.id}"></button></td>`
         const amount = `<td>${item.q * item.price}</td>`;
         // Botó per eliminar producte
-        const remove = `<button class="remove" value="${item.id}">Eliminar</button>`
+        const remove = `<td><button class="remove btn btn-danger bg-danger" value="${item.id}"><i class="bi bi-trash"></i></button></td>`
     
         // Muntem el detall i l'imprimim
         row.setAttribute("id", "row-" + item.id);
+        row.classList.add("text-right");
         row.innerHTML = id + name + price + q + up + down + amount + remove;
         // Si la cantidad es cero tacho el producto
         if (item.q <= 0)
-            row.style.textDecoration = "line-through";
+            row.classList.add('through');
         llista.appendChild(row);
     
         // Acumulem al subtotal
@@ -118,20 +119,23 @@ const printList = () => {
     // Añado eventos a los botones para incrementar cantidades
     const upButtons = llista.querySelectorAll("button.up");
     
-    upButtons.forEach( btn => btn.addEventListener("click", ev => {
-        ev.preventDefault();
+    upButtons.forEach( btn => {
+        btn.addEventListener("click", ev => {
+            ev.preventDefault();
 
-        const id = ev.target.value;
-        // Busco el índice del producto en el carrito
-        const idx = cart.findIndex(prod => prod.id === parseInt(id));
-        
-        if (idx >=0) {
-            // Aumento la cantidad del producto
-            cartQ[idx]++;
-            localStorage.setItem("cartQ", JSON.stringify(cartQ));
-            printList();
-        }
-    }))
+            const id = ev.target.value;
+            // Busco el índice del producto en el carrito
+            const idx = cart.findIndex(prod => prod.id === parseInt(id));
+            
+            if (idx >=0) {
+                // Aumento la cantidad del producto
+                cartQ[idx]++;
+                localStorage.setItem("cartQ", JSON.stringify(cartQ));
+                printList();
+            }
+        });
+        //btn.classList.add('btn', 'btn-success')
+})
 
     // Añado eventos a los botones para decrementar cantidades
     const downButtons = llista.querySelectorAll("button.down");
@@ -152,7 +156,7 @@ const printList = () => {
     }))
 
     // Añado botón para finaliar compra
-    llista.insertAdjacentHTML('beforeend', '<button id="checkout">FINALITZAR COMPRA</button>');
+    llista.insertAdjacentHTML('beforeend', '<tr class="text-center"><td colspan="8"><button id="checkout" class="w-75 btn btn-success">FINALITZAR COMPRA</button></td></tr>');
     const btn = llista.querySelector("button#checkout");
 
     btn.addEventListener("click", ev => {
