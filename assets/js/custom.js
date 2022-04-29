@@ -34,4 +34,14 @@ export const filterProducts = (products, type, subtype) => {
     return filteredProducts
 }
 
+export const setFilter = (type, subtype) => {
+    localStorage.setItem("type", type);
+    localStorage.setItem("subtype", subtype)
+}
+
+export const getFilter = () => {
+    const type = localStorage.getItem("type") || "Cerveses";
+    const subtype = localStorage.getItem("subtype") || "all";
+    return {'type': type, 'subtype': subtype}
+}
 
