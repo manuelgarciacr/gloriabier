@@ -1,4 +1,4 @@
-import { cart, cartQ } from "./custom.js";
+import { buy, cart, cartQ } from "./custom.js";
 
 // Función para finalizar compra
 const checkout = () => {
