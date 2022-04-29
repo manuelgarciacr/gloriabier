@@ -1,7 +1,5 @@
-// import { products as productsAll } from "./data.js";
-import productsAll from './data.json' assert { type: "json" };
-import { cart, cartQ, buy } from "./custom.js";
-import { filterProducts } from "./custom.js";
+//import productsAll from './data.json' assert { type: "json" };
+import { productsAll, filterProducts, cart, cartQ, buy } from "./custom.js";
 
 // Proceso la url
 const url = new URL(window.location.href);
@@ -95,6 +93,7 @@ if (!Array.isArray(prod.img) || prod.img.length <= 1) {
 }
 
 // Cargo en pantalla los productos relacionados (DOM)
+console.log(productsAll)
 loadProducts();
 
 // Añado eventos click al carrito

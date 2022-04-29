@@ -1,4 +1,5 @@
-import productsAll from './data.json' assert { type: "json" };
+// import productsAll from './data.json' assert { type: "json" };
+import { productsAll } from './custom.js';
 
 const search = document.getElementById('search-id');
 const searchItems = document.getElementById('search-items');
@@ -13,10 +14,12 @@ productsAll.forEach(prod => {
 search.addEventListener("change", ev => {
     ev.preventDefault();
 
-    if (!ev.target.value)
-        return;
     const val = ev.target.value;
     const opt = searchItems.querySelector('option[value="' + val + '"]');
+
+    if (!val || !opt)
+        return;
+
     const link = document.createElement('a');
     ev.target.value = "";
     link.setAttribute("href", "shop-single.html?id=" + opt.dataset.id + "&sub=all");

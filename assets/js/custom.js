@@ -6,6 +6,17 @@ const cartQJSON = localStorage.getItem("cartQ") || "[]";
 export const cartQ = JSON.parse(cartQJSON);
 const cartBadge = document.querySelector("span.cart.badge");
 cartBadge.innerText = cart.length || "";
+export const productsAll = [];
+
+await fetch('http://localhost:3000/products', {
+    method: 'get'
+}).then(res => 
+    res.json()
+).then(res => 
+    productsAll.splice(0, ...res)
+).catch(err => 
+    console.log(err)
+);
 //
 // End Persistence
 
@@ -42,5 +53,5 @@ export const setFilter = (type, subtype) => {
 export const getFilter = () => {
     const type = localStorage.getItem("type") || "Cerveses";
     const subtype = localStorage.getItem("subtype") || "all";
-    return {'type': type, 'subtype': subtype}
+    return { 'type': type, 'subtype': subtype }
 }

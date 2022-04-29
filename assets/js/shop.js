@@ -1,6 +1,5 @@
-// import { products as productsAll } from "./data.js";
-import productsAll from './data.json' assert { type: "json" };
-import { filterProducts, setFilter, getFilter } from "./custom.js";
+//import productsAll from './data.json' assert { type: "json" };
+import { productsAll, filterProducts, setFilter, getFilter } from "./custom.js";
 
 const filtersDiv = document.querySelector("div.shop-filters");
 const container = document.querySelector("div.shop-products");
