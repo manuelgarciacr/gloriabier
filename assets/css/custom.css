@@ -11,6 +11,7 @@
     --black-color: #252525 ;
     --yellow-color: #f0c179;
     --gray-color: #cfd6e1;
+    --version: "v3.0.0";
 }
 
 * {
@@ -252,4 +253,8 @@ footer .inactive > a:after {
 /*Ocultar Search input en Homepage*/
 .fa.fa-fw.fa-search.text-dark.mr-2 {
     display: none;
-  }
+ }
+
+ p.version::after {
+     content: var(--version);
+ }
